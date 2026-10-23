@@ -1,6 +1,6 @@
 # Launch verification
 
-Verified locally before publication. No public deployment or X posting was performed.
+Verified locally and on the public GitHub Pages deployment. No X posting was performed.
 
 - Syntax checks pass; all 11 automated tests pass.
 - Desktop viewport: 1440 × 1000. Mobile viewport: 390 × 844.
@@ -18,8 +18,18 @@ Verified locally before publication. No public deployment or X posting was perfo
 - Build tested with a placeholder HTTPS base and repository subpath: all four entry pages include absolute canonical/social image URLs and valid local asset references. Final local build clears that placeholder.
 - Deployed files exclude `.git`, tests, launch drafts, and configuration sources.
 
-## Still to verify after deployment
+## Public deployment verification
 
-The public repository has been created. Source upload and GitHub Pages deployment are pending local Git authentication. Verify actual Actions permissions, deployment URL, HTTPS, issue-draft entry, and the social preview after going live. X preview rendering depends on X's crawler/cache; only static metadata and images have been verified locally. No personal social profile is linked.
+The source is published at https://github.com/pendaralearning/InferenceLearning and the site at https://pendaralearning.github.io/InferenceLearning/ . The initial Actions build and deployment succeeded; the workflow ran syntax checks, all 11 tests, and the public-data scan.
+
+- The HTTPS homepage loads, defaults to English on a fresh origin, and switches to Chinese.
+- The home demo carries context=8192, batch=3, capacity=24 into the full lab, which reports 12.00 GiB KV and 27.44 GiB total.
+- The dedicated KV URL restores those parameters in Chinese; canonical and social image URLs use the verified public hostname and repository subpath.
+- The batching and speculation HTML entry pages open directly and show the expected default calculations.
+- The copy action reports success. The correction action opens a GitHub issue draft with only the lesson, parameters, and public experiment link. No issue was submitted.
+- The live PNG result card downloads and displays the public site address with no personal author name or email.
+- Chinese home has no horizontal overflow at 390px; no browser console errors were captured in the exercised flows.
+
+X preview rendering still depends on X's crawler/cache; static metadata and images have been verified. No personal social profile is linked.
 
 `demo-kv.gif` is a three-state demo assembled from screenshots of the real UI, with deliberate holds for readability. It is not a continuous screen recording or a GPU benchmark.

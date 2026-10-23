@@ -252,8 +252,6 @@ const EN = {
   "小 batch decode 常受带宽限制，但推理并非始终 memory-bound。Prefill、batch、上下文与硬件共同决定瓶颈。": "Small-batch decode is often bandwidth-bound, but inference is not always memory-bound. Prefill, batch size, context length, and hardware determine the bottleneck together.",
   "FlashAttention 避免 N×N 中间矩阵物化；不将其笼统描述为所有 HBM 访问复杂度均为 O(N)。": "FlashAttention avoids materializing the N×N intermediate matrix; its HBM access complexity should not universally be described as O(N).",
   "量化体积、概率接受和 rollout 占比可以计算；实际速度提升、质量损失和显存节省比例不能一概而论。": "Storage ratios, acceptance probabilities, and rollout fractions can be calculated. Actual speedups, quality loss, and memory savings depend on the workload and implementation.",
-  "交互形式参考 ": "Interaction format inspired by ",
-  "。本平台的视觉、教学路线与实验实现独立编写。": ". The visual design, learning path, and experiment implementations were independently authored.",
   "完成已记录。继续把直觉变成能力。": "Completion recorded. Keep turning intuition into skill.",
   "已自动保存 ✓": "Saved automatically ✓",
   "存储不可用，请导出备份": "Storage unavailable; export a backup",

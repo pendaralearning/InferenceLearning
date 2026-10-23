@@ -1,6 +1,6 @@
 # X launch copy
 
-Drafts only. Replace `[LIVE_URL]` with the verified deployment URL. Use an English entry link (`?lang=en`). These drafts deliberately describe simulations, not measured speedups.
+Drafts only. The deployment URL below has been verified. English entry links use `?lang=en`. These drafts deliberately describe simulations, not measured speedups.
 
 ## Main post
 
@@ -12,7 +12,7 @@ No GPU. No setup. English + 中文.
 
 Teaching simulations, with assumptions visible.
 
-[LIVE_URL]
+https://pendaralearning.github.io/InferenceLearning/?lang=en
 
 Attach: `demo-kv.gif` or `assets/social-home.png`.
 
@@ -22,7 +22,7 @@ The model fits on your GPU. But does the conversation?
 
 In this teaching model, 8K context uses 4 GiB of KV cache per sequence. Move concurrency from 1 to 3 and watch a 24 GiB memory budget break.
 
-Try it: [LIVE_URL]/experiments/kv-cache.html?lang=en
+Try it: https://pendaralearning.github.io/InferenceLearning/experiments/kv-cache.html?lang=en
 
 Attach: `assets/social-kv.png` or a downloaded result card.
 
@@ -34,7 +34,7 @@ Compare static and continuous batching: six requests, two slots, one scheduler s
 
 A toy simulation to build intuition—not a GPU benchmark.
 
-[LIVE_URL]/experiments/continuous-batching.html?lang=en
+https://pendaralearning.github.io/InferenceLearning/experiments/continuous-batching.html?lang=en
 
 Attach: `assets/social-batch.png`.
 
@@ -44,7 +44,7 @@ Guessing more tokens isn't always faster.
 
 Change acceptance rate, draft length, and draft cost. Find when speculative decoding loses its advantage in this simplified model.
 
-[LIVE_URL]/experiments/speculative-decoding.html?lang=en
+https://pendaralearning.github.io/InferenceLearning/experiments/speculative-decoding.html?lang=en
 
 Attach: `assets/social-spec.png`.
 
@@ -56,7 +56,7 @@ Attach: `assets/social-spec.png`.
 
 支持中英切换、参数分享和结果卡片。所有数字都是有明确假设的教学模拟，不是实测 benchmark。
 
-[LIVE_URL]/?lang=zh
+https://pendaralearning.github.io/InferenceLearning/?lang=zh
 
 ## Demo sequence
 

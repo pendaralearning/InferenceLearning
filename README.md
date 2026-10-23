@@ -37,7 +37,7 @@ The full route includes prefill/decode, roofline, KV cache, GQA, paging, FlashAt
 
 ## Deploy to GitHub Pages
 
-The public repository is [pendaralearning/InferenceLearning](https://github.com/pendaralearning/InferenceLearning). The site has **not yet been deployed**. After pushing the source:
+The public repository is [pendaralearning/InferenceLearning](https://github.com/pendaralearning/InferenceLearning). The site is live at [Infra Lab](https://pendaralearning.github.io/InferenceLearning/). Subsequent pushes to `main` deploy automatically through this workflow:
 
 1. In repository Settings → Pages, select **GitHub Actions** as the source.
 2. Run **Deploy Infra Lab to GitHub Pages**, or push to `main` after enabling Pages.
@@ -77,12 +77,12 @@ Tests cover all lesson translations, alternative calculation branches, language/
 
 The Reading page links public papers on PagedAttention, FlashAttention, GQA, speculative decoding, transformer inference scaling, AWQ, DPO, PPO, and GRPO. It includes unit explanations and limitations. Only public reference material is linked.
 
-Interaction inspiration: [AI Systems Playground](https://schuture.github.io/ai-systems-playground/). The visual design, learning route, and experiment implementations are independently authored. This educational project does not claim production-serving or kernel benchmark results.
+The visual design, learning route, and experiment implementations are independently authored. This educational project does not claim production-serving or kernel benchmark results.
 
 ## 中文
 
 面向软件工程师的中英双语 AI 基础设施交互学习平台。首页可直接调整 KV cache 参数；12 节实验包含公式、假设、知识检验和本地笔记。支持参数链接、结果卡片、公开论文阅读和纠错信息生成。
 
-运行 `npm run build` 后用静态服务器打开 `dist`。GitHub 公开仓库已创建；代码上传与正式部署尚待完成。本项目没有自动发布 X 内容。
+运行 `npm run build` 后用静态服务器打开 `dist`。正式网站：[https://pendaralearning.github.io/InferenceLearning/](https://pendaralearning.github.io/InferenceLearning/)。后续推送到 main 会自动检查并部署。本项目没有自动发布 X 内容。
 
 Review records: [content and formulas](docs/CONTENT_REVIEW.md), [asset provenance and font licenses](assets/THIRD_PARTY_NOTICES.txt), and [release privacy checks](docs/PRIVACY_REVIEW.md).

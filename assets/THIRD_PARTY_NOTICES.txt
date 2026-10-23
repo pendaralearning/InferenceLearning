@@ -1,4 +1,4 @@
-Infra Lab — visual and asset provenance
+AI Infra Lab — visual and asset provenance
 
 The four-tile brand mark is rendered by HTML/CSS in this project. Experiment bars,
 grids, schedules, and token blocks are rendered by this project's JavaScript and

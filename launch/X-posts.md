@@ -4,7 +4,7 @@ Drafts only. The deployment URL below has been verified. English entry links use
 
 ## Main post
 
-I built Infra Lab for software engineers learning AI infrastructure.
+I built AI Infra Lab for software engineers learning AI infrastructure.
 
 Explore KV cache, batching, and speculative decoding through 12 interactive experiments.
 
@@ -50,7 +50,7 @@ Attach: `assets/social-spec.png`.
 
 ## 中文主帖备选
 
-我做了 Infra Lab：给想理解 AI 基础设施的软件工程师。
+我做了 AI Infra Lab：给想理解 AI 基础设施的软件工程师。
 
 不用 GPU，不用安装。通过 12 个交互实验，动手理解 KV cache、调度、推测解码和显存规划。
 

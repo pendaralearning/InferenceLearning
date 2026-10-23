@@ -28,8 +28,8 @@ function refreshLanguage() {
   LESSONS = translateData(LESSONS_ZH);
   document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN';
   document.title = lang === 'en'
-    ? 'Infra Lab — Bring your systems intuition into AI'
-    : 'Infra Lab — 把系统直觉带进 AI';
+    ? 'AI Infra Lab — Bring your systems intuition into AI'
+    : 'AI Infra Lab — 把系统直觉带进 AI';
   document.querySelector('meta[name="description"]').content = lang === 'en'
     ? 'Interactive AI infrastructure lessons for software engineers: memory, inference, scheduling, and capacity planning.'
     : '从软件工程师到 AI 基础设施工程师：通过可调参实验、工程场景和知识检验，理解 LLM 推理与系统。';

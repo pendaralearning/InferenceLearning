@@ -1,8 +1,8 @@
-# InferenceLearning · Infra Lab
+# InferenceLearning · AI Infra Lab
 
 Interactive AI infrastructure experiments for software engineers. Start with a live KV-cache memory budget, then explore twelve bilingual lessons on memory, computation, scheduling, and capacity planning.
 
-![Infra Lab](assets/social-home.png)
+![AI Infra Lab](assets/social-home.png)
 
 No GPU, account, API key, runtime dependencies, or backend. All numerical results are **teaching simulations**, not measured benchmarks.
 
@@ -37,10 +37,10 @@ The full route includes prefill/decode, roofline, KV cache, GQA, paging, FlashAt
 
 ## Deploy to GitHub Pages
 
-The public repository is [pendaralearning/InferenceLearning](https://github.com/pendaralearning/InferenceLearning). The site is live at [Infra Lab](https://pendaralearning.github.io/InferenceLearning/). Subsequent pushes to `main` deploy automatically through this workflow:
+The public repository is [pendaralearning/InferenceLearning](https://github.com/pendaralearning/InferenceLearning). The site is live at [AI Infra Lab](https://pendaralearning.github.io/InferenceLearning/). Subsequent pushes to `main` deploy automatically through this workflow:
 
 1. In repository Settings → Pages, select **GitHub Actions** as the source.
-2. Run **Deploy Infra Lab to GitHub Pages**, or push to `main` after enabling Pages.
+2. Run **Deploy AI Infra Lab to GitHub Pages**, or push to `main` after enabling Pages.
 3. The workflow verifies the code, builds `dist`, and deploys only public runtime assets.
 4. The build takes the real canonical URL from `actions/configure-pages` and the repository URL from `GITHUB_REPOSITORY`. This also enables the source and correction links. No hostname is guessed.
 5. Verify the deployment URL reported by Actions before using the launch copy.

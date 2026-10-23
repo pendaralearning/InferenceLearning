@@ -19,18 +19,18 @@ const template=fs.readFileSync(path.join(root,'index.html'),'utf8').replace(/(sr
  return `${attr}="${file}?v=${version}"`;
 });
 const pages=[
- {file:'index.html',title:'Infra Lab — Build AI systems intuition',desc:'Interactive AI infrastructure experiments for software engineers. No GPU, setup, or sign-up.',image:'social-home.png'},
- {file:'experiments/kv-cache.html',id:2,title:'The model fits. Does the conversation? — Infra Lab',desc:'Adjust context and concurrency. Watch KV cache consume GPU memory in this interactive teaching model.',image:'social-kv.png'},
- {file:'experiments/continuous-batching.html',id:7,title:'Why is this GPU slot waiting? — Infra Lab',desc:'Compare static and continuous batching. See how six requests share two decode slots.',image:'social-batch.png'},
- {file:'experiments/speculative-decoding.html',id:8,title:'More guesses. Always faster? — Infra Lab',desc:'Explore the tradeoff between acceptance rate and draft cost in speculative decoding.',image:'social-spec.png'}
+ {file:'index.html',title:'AI Infra Lab — Build AI systems intuition',desc:'Interactive AI infrastructure experiments for software engineers. No GPU, setup, or sign-up.',image:'social-home.png'},
+ {file:'experiments/kv-cache.html',id:2,title:'The model fits. Does the conversation? — AI Infra Lab',desc:'Adjust context and concurrency. Watch KV cache consume GPU memory in this interactive teaching model.',image:'social-kv.png'},
+ {file:'experiments/continuous-batching.html',id:7,title:'Why is this GPU slot waiting? — AI Infra Lab',desc:'Compare static and continuous batching. See how six requests share two decode slots.',image:'social-batch.png'},
+ {file:'experiments/speculative-decoding.html',id:8,title:'More guesses. Always faster? — AI Infra Lab',desc:'Explore the tradeoff between acceptance rate and draft cost in speculative decoding.',image:'social-spec.png'}
 ];
 for(const page of pages){
  let html=template.replace(/<title>.*?<\/title>/,`<title>${escape(page.title)}</title>`).replace(/<meta name="description" content="[^"]*">/,`<meta name="description" content="${escape(page.desc)}">`);
  if(page.id!==undefined)html=html.replace('<head>','<head><base href="../">').replace('<body>',`<body data-lesson="${page.id}">`);
- let tags=`<meta property="og:type" content="website"><meta property="og:site_name" content="Infra Lab"><meta property="og:title" content="${escape(page.title)}"><meta property="og:description" content="${escape(page.desc)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${escape(page.title)}"><meta name="twitter:description" content="${escape(page.desc)}">`;
+ let tags=`<meta property="og:type" content="website"><meta property="og:site_name" content="AI Infra Lab"><meta property="og:title" content="${escape(page.title)}"><meta property="og:description" content="${escape(page.desc)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${escape(page.title)}"><meta name="twitter:description" content="${escape(page.desc)}">`;
  if(config.siteUrl){const url=config.siteUrl+'/'+(page.file==='index.html'?'':page.file),image=config.siteUrl+'/assets/'+page.image;tags+=`<link rel="canonical" href="${escape(url)}"><meta property="og:url" content="${escape(url)}"><meta property="og:image" content="${escape(image)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${escape(page.title)}"><meta name="twitter:image" content="${escape(image)}">`;}
  html=html.replace('</head>',tags+'</head>');fs.writeFileSync(path.join(out,page.file),html);
 }
 fs.writeFileSync(path.join(out,'.nojekyll'),'');
-fs.writeFileSync(path.join(out,'404.html'),'<html lang="en"><meta charset="utf-8"><title>Not found — Infra Lab</title><h1>This experiment could not be found.</h1><p>Return to Infra Lab using your browser’s back button.</p></html>');
+fs.writeFileSync(path.join(out,'404.html'),'<html lang="en"><meta charset="utf-8"><title>Not found — AI Infra Lab</title><h1>This experiment could not be found.</h1><p>Return to AI Infra Lab using your browser’s back button.</p></html>');
 console.log('Built dist/ with '+pages.length+' entry pages.'+(config.siteUrl?' Canonical base: '+config.siteUrl:' Public URL not configured; canonical and image URLs omitted.'));

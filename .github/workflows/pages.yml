@@ -1,4 +1,4 @@
-name: Deploy Infra Lab to GitHub Pages
+name: Deploy AI Infra Lab to GitHub Pages
 on:
   push:
     branches: [main]

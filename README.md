@@ -37,7 +37,7 @@ The full route includes prefill/decode, roofline, KV cache, GQA, paging, FlashAt
 
 ## Deploy to GitHub Pages
 
-The repository has **not yet been created or deployed**. After choosing/creating the remote repository and pushing the source:
+The public repository is [pendaralearning/InferenceLearning](https://github.com/pendaralearning/InferenceLearning). The site has **not yet been deployed**. After pushing the source:
 
 1. In repository Settings → Pages, select **GitHub Actions** as the source.
 2. Run **Deploy Infra Lab to GitHub Pages**, or push to `main` after enabling Pages.
@@ -83,6 +83,6 @@ Interaction inspiration: [AI Systems Playground](https://schuture.github.io/ai-s
 
 面向软件工程师的中英双语 AI 基础设施交互学习平台。首页可直接调整 KV cache 参数；12 节实验包含公式、假设、知识检验和本地笔记。支持参数链接、结果卡片、公开论文阅读和纠错信息生成。
 
-运行 `npm run build` 后用静态服务器打开 `dist`。GitHub 仓库与正式网址尚待创建／配置。本项目没有自动发布 X 内容。
+运行 `npm run build` 后用静态服务器打开 `dist`。GitHub 公开仓库已创建；代码上传与正式部署尚待完成。本项目没有自动发布 X 内容。
 
 Review records: [content and formulas](docs/CONTENT_REVIEW.md), [asset provenance and font licenses](assets/THIRD_PARTY_NOTICES.txt), and [release privacy checks](docs/PRIVACY_REVIEW.md).

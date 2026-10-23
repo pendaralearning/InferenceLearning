@@ -14,7 +14,7 @@ const EN = {
   "连接训练与推理，完成一次容量规划挑战。": "Connect training to inference and complete a capacity planning challenge.",
   "一次请求，两个阶段": "One request, two phases",
   "为什么同一个模型，处理输入和生成输出需要两套优化思路？": "Why do processing a prompt and generating a response call for different optimizations?",
-  "像 Web 服务的初始化与流式响应：TTFT 衡量第一个 token 多久到达；TPOT 衡量之后每个 token 的生成间隔。": "Think of initialization followed by a streaming response: TTFT measures the wait for the first token; TPOT measures the interval between subsequent tokens.",
+  "像 Web 服务的初始化与流式响应：TTFT 衡量首个 token 的等待时间；TPOT 是首个之后平均每个 token 的生成时间。流式传输一次可能包含多个 token，因此接收块的间隔不等于 TPOT。": "Think of initialization followed by a streaming response: TTFT measures the wait for the first token; TPOT is the average generation time per token after the first. A streamed chunk can contain multiple tokens, so chunk arrival intervals are not TPOT.",
   "把输入从 512 调到 8192 tokens，再把输出从 64 调到 512。观察 TTFT 与总耗时各自受谁影响。": "Increase the input from 512 to 8192 tokens, then the output from 64 to 512. Watch which change affects TTFT and which affects total time.",
   "区分 TTFT、TPOT 和端到端延迟": "Distinguish TTFT, TPOT, and end-to-end latency",
   "先定位慢在排队、prefill 还是 decode": "Locate the delay: queuing, prefill, or decode",

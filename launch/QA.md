@@ -20,6 +20,6 @@ Verified locally before publication. No public deployment or X posting was perfo
 
 ## Still to verify after deployment
 
-The remote repository and GitHub Pages site have not been created. Verify actual Actions permissions, deployment URL, HTTPS, issue-draft entry, and the social preview after going live. X preview rendering depends on X's crawler/cache; only static metadata and images have been verified locally. No personal social profile is linked.
+The public repository has been created. Source upload and GitHub Pages deployment are pending local Git authentication. Verify actual Actions permissions, deployment URL, HTTPS, issue-draft entry, and the social preview after going live. X preview rendering depends on X's crawler/cache; only static metadata and images have been verified locally. No personal social profile is linked.
 
 `demo-kv.gif` is a three-state demo assembled from screenshots of the real UI, with deliberate holds for readability. It is not a continuous screen recording or a GPU benchmark.

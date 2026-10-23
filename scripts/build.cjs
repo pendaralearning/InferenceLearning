@@ -12,7 +12,12 @@ for(const file of ['style.css','curriculum.js','translations.js','i18n.js','app.
 fs.cpSync(path.join(root,'assets'),path.join(out,'assets'),{recursive:true});
 fs.writeFileSync(path.join(out,'config.js'),'const SITE = '+JSON.stringify(config,null,2)+';\n');
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const template=fs.readFileSync(path.join(root,'index.html'),'utf8');
+// Content versions keep deployed pages from reusing stale scripts or styles.
+const crypto=require('node:crypto');
+const template=fs.readFileSync(path.join(root,'index.html'),'utf8').replace(/(src|href)="([^"]+\.(?:js|css))"/g,(_,attr,file)=>{
+ const version=crypto.createHash('sha256').update(fs.readFileSync(path.join(out,file))).digest('hex').slice(0,12);
+ return `${attr}="${file}?v=${version}"`;
+});
 const pages=[
  {file:'index.html',title:'Infra Lab — Build AI systems intuition',desc:'Interactive AI infrastructure experiments for software engineers. No GPU, setup, or sign-up.',image:'social-home.png'},
  {file:'experiments/kv-cache.html',id:2,title:'The model fits. Does the conversation? — Infra Lab',desc:'Adjust context and concurrency. Watch KV cache consume GPU memory in this interactive teaching model.',image:'social-kv.png'},

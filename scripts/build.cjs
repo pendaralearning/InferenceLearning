@@ -10,6 +10,8 @@ if(config.siteUrl)config.siteUrl=config.siteUrl.replace(/\/$/,'');
 fs.rmSync(out,{recursive:true,force:true});fs.mkdirSync(path.join(out,'experiments'),{recursive:true});
 for(const file of ['style.css','curriculum.js','translations.js','i18n.js','app.js','launch.js'])fs.copyFileSync(path.join(root,file),path.join(out,file));
 fs.cpSync(path.join(root,'assets'),path.join(out,'assets'),{recursive:true});
+// Publish the encrypted friends-only trip page; no plaintext trip content or password is committed.
+fs.cpSync(path.join(root,'friends-only'),path.join(out,'friends-only'),{recursive:true});
 fs.writeFileSync(path.join(out,'config.js'),'const SITE = '+JSON.stringify(config,null,2)+';\n');
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 // Content versions keep deployed pages from reusing stale scripts or styles.
